@@ -1,0 +1,19 @@
+# REQUETES #
+
+/* Retourne la table global */
+SELECT * from global;
+
+/* Retourne la table countries */
+SELECT * from countries;
+
+/* Retourne les infos du pays "?" */
+SELECT * from countries where country_code = "?";
+
+/* Retoune le moyenne de cas confirmés tous pays confondus */
+SELECT (SUM(total_confirmed) / COUNT(*)) from countries;
+
+/* Retourne la moyenne des décès tous pays confondus */
+SELECT (SUM(total_deaths) / COUNT(*)) from countries;
+
+/* Retourne le taux de mortalité tous pays confondus */
+SELECT (SUM(total_deaths) / SUM(total_confirmed)) * 100 from countries;

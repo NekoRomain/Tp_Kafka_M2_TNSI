@@ -1,0 +1,1 @@
+docker container exec -i postgres_db_1 psql -h localhost -d tpkafka -U postgres -p 5432 -a -q requete.sql < creationTable.sql
